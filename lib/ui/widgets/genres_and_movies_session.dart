@@ -3,16 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app/cubit/genre_movies/genre_movies_cubit.dart';
 import 'package:movie_app/cubit/genres/genres_cubit.dart';
 import 'package:movie_app/ui/theme.dart';
-import 'package:movie_app/ui/widgets/components/custom_image.dart';
 import 'package:movie_app/ui/widgets/movie_item.dart';
-
 import '../../config/app_config.dart';
 import '../../data/model/genre.dart';
 import '../../data/model/movie.dart';
-import 'components/big_text.dart';
 import 'components/error_view.dart';
 import 'components/loading_view.dart';
-import 'components/rating_stars.dart';
 
 class GenresAndMoviesSession extends StatefulWidget {
   const GenresAndMoviesSession({Key? key}) : super(key: key);

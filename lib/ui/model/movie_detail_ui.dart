@@ -1,4 +1,3 @@
-import 'package:intl/intl.dart';
 import 'package:movie_app/data/model/genre.dart';
 import 'package:movie_app/data/model/movie_detail.dart';
 import 'package:movie_app/utils/use_me.dart';

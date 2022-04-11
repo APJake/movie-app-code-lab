@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app/cubit/popular_movies/popular_movies_cubit.dart';
 import 'package:movie_app/data/model/movie.dart';
-import 'package:movie_app/ui/widgets/components/big_text.dart';
-import 'package:movie_app/ui/widgets/components/custom_image.dart';
 import 'package:movie_app/ui/widgets/components/error_view.dart';
 import 'package:movie_app/ui/widgets/components/loading_view.dart';
-import 'package:movie_app/ui/widgets/components/rating_stars.dart';
 import 'package:movie_app/ui/widgets/components/small_text.dart';
 import 'package:movie_app/ui/widgets/movie_item.dart';
 

@@ -58,11 +58,15 @@ class CustomImage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
       placeholder: (context, _) => SizedBox(
-        child: Center(
-          child: SizedBox(
-              width: 20,
-              height: 20,
-              child: CircularProgressIndicator(color: loadingColor)),
+        child: SizedBox(
+          width: width,
+          height: height,
+          child: Center(
+            child: SizedBox(
+                width: 20,
+                height: 20,
+                child: CircularProgressIndicator(color: loadingColor)),
+          ),
         ),
       ),
       errorWidget: (context, _, __) {

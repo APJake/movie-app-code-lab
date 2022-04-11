@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app/cubit/best_actors/best_actors_cubit.dart';
-import 'package:movie_app/data/model/cast.dart';
 import 'package:movie_app/ui/model/person.dart';
 import 'package:movie_app/ui/widgets/person_list_session.dart';
 import '../../config/app_config.dart';
 import '../theme.dart';
 import 'components/anchor_text.dart';
-import 'components/big_text.dart';
-import 'components/custom_image.dart';
 import 'components/error_view.dart';
 import 'components/loading_view.dart';
 import 'components/small_text.dart';

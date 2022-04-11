@@ -7,6 +7,8 @@ import 'package:movie_app/utils/use_me.dart';
 import '../../config/app_config.dart';
 import '../../cubit/now_playing_movies/now_playing_movies_cubit.dart';
 import '../../data/model/movie.dart';
+import '../../utils/navigation_service.dart';
+import '../screens/movie_detail_screen.dart';
 import '../theme.dart';
 import 'components/big_text.dart';
 import 'components/error_view.dart';
@@ -37,7 +39,11 @@ class ShowCaseSession extends StatelessWidget {
                 )),
             Positioned.fill(
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  getIt
+                      .call<NavigationService>()
+                      .to(MovieDetailScreen.routeName, arguments: movie);
+                },
                 icon: const Icon(
                   Icons.play_circle,
                   size: AppSizes.bigIcon,
