@@ -46,9 +46,4 @@ void locator() {
 
   // for best actors session
   getIt.registerLazySingleton(() => BestActorsCubit(getIt.call()));
-
-  // MOVIE DETAIL PAGE
-  // movie detail
-  getIt.registerLazySingleton(() => MovieDetailCubit(getIt.call()));
-  getIt.registerLazySingleton(() => MovieCreditsCubit(getIt.call()));
 }

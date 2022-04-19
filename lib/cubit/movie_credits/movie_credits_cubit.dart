@@ -9,7 +9,11 @@ part 'movie_credits_state.dart';
 
 class MovieCreditsCubit extends Cubit<MovieCreditsState> {
   final MovieRepository _repository;
-  MovieCreditsCubit(this._repository) : super(MovieCreditsLoading());
+  final int movieId;
+  MovieCreditsCubit(this._repository, {required this.movieId})
+      : super(MovieCreditsLoading()) {
+    loadCredits(movieId);
+  }
 
   void loadCredits(int movieId) {
     emit(MovieCreditsLoading());

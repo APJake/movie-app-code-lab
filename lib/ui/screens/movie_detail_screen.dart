@@ -151,10 +151,12 @@ class MovieDetailScreen extends StatelessWidget {
       body: MultiBlocProvider(
         providers: [
           BlocProvider<MovieDetailCubit>(
-            create: (context) => getIt.call(),
+            create: (context) =>
+                MovieDetailCubit(getIt.call(), movieId: movie.id),
           ),
           BlocProvider<MovieCreditsCubit>(
-            create: (context) => getIt.call(),
+            create: (context) =>
+                MovieCreditsCubit(getIt.call(), movieId: movie.id),
           ),
         ],
         child: CustomScrollView(slivers: [

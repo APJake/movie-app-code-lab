@@ -24,13 +24,6 @@ class MovieDetailSession extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!getIt<MovieDetailCubit>().isClosed) {
-      getIt.call<MovieDetailCubit>().loadMovie(movieId);
-    }
-    if (!getIt<MovieCreditsCubit>().isClosed) {
-      getIt.call<MovieCreditsCubit>().loadCredits(movieId);
-    }
-
     _screenWidth = MediaQuery.of(context).size.width;
 
     _timeAndGenres(int minutes, List<Genre> genres) => Container(

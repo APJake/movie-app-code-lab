@@ -9,7 +9,11 @@ part 'movie_detail_state.dart';
 
 class MovieDetailCubit extends Cubit<MovieDetailState> {
   final MovieRepository _movieRepository;
-  MovieDetailCubit(this._movieRepository) : super(MovieDetailLoading());
+  final int movieId;
+  MovieDetailCubit(this._movieRepository, {required this.movieId})
+      : super(MovieDetailLoading()) {
+    loadMovie(movieId);
+  }
 
   void loadMovie(int movieId) {
     emit(MovieDetailLoading());
